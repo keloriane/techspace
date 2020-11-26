@@ -3,7 +3,9 @@
    License: none (public domain)
 */
 
-
+body {
+    overflow-x: hidden;
+}
 section{
     margin-top: 40vw;
 }

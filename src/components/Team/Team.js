@@ -31,7 +31,7 @@ const Team = () => {
         "face aux nouvelles technologies\n" +
         "Sensibiliser et \n" +
         "vulgariser. ",
-      picture: require("./../../assets/images/Ornella.png")
+      picture: require("./../../assets/images/pamela.png")
     }, {
       id: 1,
       name: "blabla",
@@ -42,27 +42,27 @@ const Team = () => {
         "face aux nouvelles technologies\n" +
         "Sensibiliser et \n" +
         "vulgariser. ",
-      picture: require("./../../assets/images/Ornella.png")
+      picture: require("./../../assets/images/fatima.png")
     }, {
       id: 1,
-      name: "Simba",
-      firstName: "Ornella",
+      name: "blbla",
+      firstName: "Philippe",
       job: "Founder",
       description: "Rendre les citoyens autonomes et confortables\n" +
         "face aux nouvelles technologies\n" +
         "Sensibiliser et \n" +
         "vulgariser. ",
-      picture: require("./../../assets/images/Ornella.png")
+      picture: require("./../../assets/images/philippe.png")
     }, {
       id: 1,
-      name: "Simba",
-      firstName: "Ornella",
+      name: "Philippe",
+      firstName: "Abel",
       job: "Founder",
       description: "Rendre les citoyens autonomes et confortables\n" +
         "face aux nouvelles technologies\n" +
         "Sensibiliser et \n" +
         "vulgariser. ",
-      picture: require("./../../assets/images/Ornella.png")
+      picture: require("./../../assets/images/philippe.png")
     }
 
   ]
@@ -100,6 +100,7 @@ const Team = () => {
     .carousel {
       .slide {
         display: flex;
+        
         .text-slider {
           display: flex;
           flex-direction: column;
@@ -145,7 +146,7 @@ const Team = () => {
     
       .section-title {
         h2 {
-          font-size: 80px;
+          font-size: 60px;
           font-family: "Japoky" , sans-serif;
           
         }
@@ -154,7 +155,9 @@ const Team = () => {
     .slider-container {
       .carousel {
         .slide {
+        flex-wrap: wrap-reverse;
           .text-slider {
+          
             h3 {
               font-size: 40px;
             }
@@ -173,6 +176,30 @@ const Team = () => {
               width: 100%;
               max-width: 265px;
             }
+          }
+        }
+      }
+    }
+  }
+  
+  @media(max-width: 660px) {
+    .slider-container {
+      .carousel {
+        .slide {
+          .text-slider {
+            .job-description {
+              background-image: none;
+            p {
+            text-align: center;
+            width: 400px;
+            }
+            
+            }
+          }
+          .image-slider {
+          img {
+          max-width: 340px ;
+          }
           }
         }
       }

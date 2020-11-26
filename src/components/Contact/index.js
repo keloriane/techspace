@@ -47,8 +47,10 @@ const Contact = () => {
             background:transparent;
             border: 1px solid white;
             padding-left: 5px;
+            font-family: "Inter", sans-serif;
           }
           textarea {
+            font-family: "Inter", sans-serif;
             width: 100%;
             height: 400px;
           }
@@ -98,7 +100,10 @@ const Contact = () => {
     }
       
       
-
+label {
+font-family: "Inter" , sans-serif;
+}
+            
 
 `
 

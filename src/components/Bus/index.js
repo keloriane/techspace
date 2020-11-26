@@ -96,6 +96,7 @@ const Bus = () => {
           }
         .bus-wrapper {
           grid-template-columns: 1fr;
+          width: 80%;
          
         }
         
@@ -104,6 +105,10 @@ const Bus = () => {
 
     
     `
+
+
+
+
   return (
     <BusWrapper className="bus">
       <div className="bus-section-title">

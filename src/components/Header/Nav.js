@@ -24,10 +24,11 @@ const Nav = () => {
             margin: 0 auto;
             li {
                     text-transform:uppercase;
-                    font-size: 20px;
-                    font-weight: 800;
+                   
               a{
-              
+               font-size: 20px;
+                    font-weight: 800;
+                    font-family: "Inter" , sans-serif;
               }
 
             }

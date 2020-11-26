@@ -20,7 +20,7 @@ const Dcc = () => {
         max-width: 83vw;
         margin: 0 auto;
       h2 {
-        font-size: 8vw;
+        font-size: 5vw;
         font-style: normal;
         font-weight: 800;
         line-height: 110%;
@@ -60,7 +60,7 @@ const Dcc = () => {
         margin-top: 30px;
         
       h2{
-        font-size: 8vw;
+        font-size: 5vw;
         font-weight: 100;
         color: transparent;
         text-transform:uppercase;
@@ -110,7 +110,7 @@ const Dcc = () => {
     padding-right: 16px;
 }
           h3 {
-            font-size: 36px;
+            font-size: 29px;
             text-transform:uppercase;
             font-weight: 800;
           }

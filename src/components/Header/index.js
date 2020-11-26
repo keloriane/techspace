@@ -5,6 +5,8 @@ import HeaderHero from "./../../assets/images/header-team.png"
 import heroimg from "./../../assets/images/heroimg.png"
 import Nav from "./Nav.js"
 import Text from "../Text"
+import gsap from "gsap"
+import { motion } from "framer-motion"
 
 export const Header = () => {
 
@@ -19,9 +21,11 @@ export const Header = () => {
             color: white;
             .hero-header {
               .header-wrapper {
-                height: 80vh;
+                height: 100vh;
                 display: grid;
-                grid-template-columns: 5fr 5fr 1fr;
+                width: 90%;
+                margin: 0 auto;
+                grid-template-columns: 3fr 4fr ;
                 .text-header-container {
                   display: grid;
                  
@@ -35,20 +39,24 @@ export const Header = () => {
                   position: relative;
                   height: 350px;
                   
-                  width: 93%;
+                  width: 90%;
                   margin: 0 auto;
                   h1 {
+                      display:flex;
+                      position: absolute;
+                    span{
                       font-weight: 700;
                       color: white;
                       font-size: 6vw;
-                      position: absolute;
                       z-index: 1;
                       font-family: "Japoky" , sans-serif;
-                      .bordered {
-                        -webkit-text-stroke: 1px white;
-                        font-size: 3.5vw;
+                    
+                    }
+                      &.bordered {
+                        -webkit-text-stroke: .5px white;
+                         font-size: calc(39px + 6 * ((100vw - 320px) / 680));
                         color: transparent;
-                        position: absolute;
+                        
                        font-family: "Japoky" , sans-serif;
                        font-weight: 100;
                         }
@@ -139,15 +147,25 @@ export const Header = () => {
                 // background-image: url(${HeaderHero});
                 // width: 50vw;
                 // background-size: cover;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                picture {
+                width: 100%;
                 img {
-                  max-width: 850px;
+                  max-width: 800px;
                   width: 100%;
                   
+                }
                 }
                 
                 }
                 .social-media {
                 display: flex;
+                position: absolute;
+                right: 20px;
+                height: 90%;
                   ul {
                     list-style: none;
                     color: white;
@@ -161,8 +179,12 @@ export const Header = () => {
                       height: 70px;
                       a{
                         text-decoration:none;
+                      font-family: 'Inter', sans-serif;
                         color: white;
                         font-size: 20px;
+                        &:hover {
+                          color: #84C3E6;
+                        }
                       }
                   }
                   }
@@ -186,10 +208,7 @@ export const Header = () => {
       }
     }
   }
-  .hero-header .header-wrapper .social-media {
-    display:none;
-    
-    }
+ 
 }
 
 
@@ -206,12 +225,13 @@ export const Header = () => {
         h1 {
             position: relative;
             font-size: 70px;
-            .bordered {
+            &.bordered {
               font-size: 30px;
             }
           } 
         }
       }
+      
       //.image-header-container {
       //  display: flex;
       //  justify-content: center;
@@ -225,24 +245,29 @@ export const Header = () => {
       //}
     }
   }
+      picture {
+        display: none;
+      }
 }
     
     @media(max-width:1040px){
   
     
       .inner-text {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 420px;
-      }
-      picture {
-        display: none;
+          margin: 0 auto;
+    width: 100%;
+    max-width: 495px;
+    font-size: 21px;
       }
     }
-    .hero-header .header-wrapper .social-media {
-    display:none;
     
+    .hero-header .header-wrapper .text-header-container .title-container h1 span {
+    font-size: 6vw;
     }
+    .hero-header .header-wrapper .text-header-container .title-container h1.bordered {
+      font-size: 44px;
+    }
+    
     
     
     @media(max-width: 960px) {
@@ -256,8 +281,11 @@ export const Header = () => {
           
         h1 {
             position: relative;
-            font-size: 70px;
-            .bordered {
+            font-size: 40px;
+            span {
+              font-size: 40px;
+            }
+            &.bordered {
               font-size: 30px;
             }
           } 
@@ -272,8 +300,76 @@ export const Header = () => {
     }
   }
     }
+    .word {
+      position: relative;
+      display: flex;
+      margin: 3px;
+      
+    }
     
+    .title {
+      top: 0;
+    }
+    .subtitle {
+    bottom: 0;
+    }
     `
+
+  useEffect(() => {
+      gsap.from(".word" , { y:"100%", opacity: 0, duration:.4, stagger: .2 })
+  })
+
+
+
+  const homeAnimation = {
+    initial: {
+      opacity: 0
+    },
+    enter: {
+      opacity: 1,
+      transition: {
+
+        duration: 1
+      }
+    },
+  }
+
+  const containerImg = {
+    initial:{
+      scaleX:1,
+
+
+    },
+    enter:{
+      scaleX:0,
+      transition: {
+        duration:.2,
+
+        type: "tween"
+      }
+    }
+  }
+  const imageAnimation= {
+    initial: {
+      scale: 1.4
+    },
+    enter:{
+      scale: 1,
+      transition: {
+        duration:2,
+        ease:[.215,.61,.355,1],
+
+
+
+      }
+
+    }
+
+  }
+
+
+
+
 
   return (
     <HeaderTag>
@@ -282,8 +378,8 @@ export const Header = () => {
         <div className="header-wrapper">
           <div className="text-header-container">
             <div className="title-container">
-              <h1>LE TECHSPACE <br />
-                <span className={"bordered"}>REUSSISSEZ VOTRE CHEMIN <br /> VERS LE DIGITAL</span>
+              <h1 className={"title"}> <span className={"word"}>LE </span> <span className={"word"}> TECHSPACE</span> </h1>
+              <h1 className={"subtitle bordered"}> REUSSISSEZ VOTRE CHEMIN <br /> VERS LE DIGITAL
               </h1>
             </div>
             <div className="info-wrapper">
@@ -342,7 +438,11 @@ export const Header = () => {
             <picture>
               <source srcSet={HeaderHero} media="(min-width: 1300px)" />
               <source srcSet={heroimg} media="(min-width: 1200px)" />
-              <img srcSet={heroimg} alt="hello" />
+              <motion.img srcSet={heroimg} alt="hello"
+                          variants={imageAnimation}
+                          initial={"initial"}
+                          animate={"enter"}
+              />
             </picture>
           </div>
           <div className="social-media">

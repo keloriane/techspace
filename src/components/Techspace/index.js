@@ -33,6 +33,7 @@ const Techspace = () => {
       grid-template-rows: 1fr 1fr;
       grid-column-gap: 25px;
       grid-row-gap: 25px;
+      margin-top: 60px;
       
       
     .card{  
@@ -72,10 +73,10 @@ const Techspace = () => {
       max-width: 400px;
       width: 100%;
       margin: 0 auto;
-      padding: 30px;
+      padding-top: 30px;
       
       h2 {
-      font-size: 80px;
+      font-size: 55px;
       
       }
     }
