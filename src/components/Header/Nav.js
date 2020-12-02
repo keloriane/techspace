@@ -1,10 +1,13 @@
 import React from 'react'
-import { Link } from "gatsby";
+import { Link } from 'react-scroll';
 import styled from "styled-components";
 import logo from "./../../assets/images/logo-techspace.svg"
 
+
 const Nav = () => {
     const NavLink = styled.nav `
+        position: absolute;
+        top: 0;
         display: flex;
         width: 90%;
         justify-content: center;
@@ -29,6 +32,8 @@ const Nav = () => {
                font-size: 20px;
                     font-weight: 800;
                     font-family: "Inter" , sans-serif;
+                    color: white;
+                    cursor: pointer;
               }
 
             }
@@ -42,16 +47,44 @@ const Nav = () => {
             </div>
                 <ul>
                     <li>
-                        <Link>About</Link>
+                        <Link
+                          activeClass="active"
+                          to="mobile"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                        >About</Link>
                     </li>
                     <li>
-                        <Link>Le bus</Link>
+                        <Link
+                          activeClass="active"
+                          to="bus"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                        >Le bus</Link>
                     </li>
                     <li>
-                        <Link>Digital carreer center</Link>
+                        <Link
+                          activeClass="active"
+                          to="dcc"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                        >Digital carreer center </Link>
                     </li>
                     <li>
-                        <Link>Contact</Link>
+                        <Link
+                          activeClass="active"
+                          to="contact"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                        >Contact</Link>
                     </li>
                 </ul>
             </NavLink>

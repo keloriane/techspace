@@ -201,7 +201,7 @@ const Dcc = () => {
 `
 
   return (
-    <DccContainer className={"dcc"}>
+    <DccContainer className={"dcc"} id={"dcc"}>
       <div className="section-title">
         <h2 className={"first"}>
           AXE 2:

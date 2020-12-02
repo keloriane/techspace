@@ -110,7 +110,7 @@ const Bus = () => {
 
 
   return (
-    <BusWrapper className="bus">
+    <BusWrapper className="bus" id={"bus"}>
       <div className="bus-section-title">
         <h2>AXE1:</h2>
         <h2 className={"bordered"}>LE BUS</h2>

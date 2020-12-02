@@ -373,7 +373,6 @@ export const Header = () => {
 
   return (
     <HeaderTag>
-      <Nav />
       <header className="hero-header">
         <div className="header-wrapper">
           <div className="text-header-container">

@@ -14,7 +14,7 @@ const Mobile = () => {
 
 
 
-  const MobileWrapper = styled.div `
+  const MobileWrapper = styled.section `
       
       
     .section-title-container {
@@ -136,6 +136,11 @@ const Mobile = () => {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       justify-items: center;
+      .left-gap {
+        width: 100%;
+        max-width: 550px;
+        justify-self: center;
+      }
       }
       .text-wrapper {
        grid-template-columns: 1fr;
@@ -144,6 +149,7 @@ const Mobile = () => {
       .left-gap {
         width: 100%;
         max-width: 550px;
+        
       }
       .right-gap {
            width: 100%;
@@ -206,7 +212,7 @@ const Mobile = () => {
 
 
   return (
-    <MobileWrapper >
+    <MobileWrapper id={"mobile"} >
       <div id="mobile-section">
 
       <div className="section-title-container" id={"mobile-section-container"}>

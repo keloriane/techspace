@@ -10,6 +10,12 @@ import Team from "./../components/Team/Team";
 import Techspace from "../components/Techspace"
 import Contact from "./../components/Contact"
 import MyFont from './../assets/Jaapokki-Regular.otf';
+import {
+  ScrollingProvider,
+  useScrollSection,
+  Section,
+} from 'react-scroll-section';
+import Nav from "../components/Header/Nav"
 
 
 export default function Home() {
@@ -42,10 +48,15 @@ p, h3, h4 {
 }
 `
 
+  const homeSection = useScrollSection('home');
+  const aboutSection = useScrollSection('about')
+
 
   return (
+
     <ThemeProvider theme={theme}>
       <GlobalWrapper>
+        <Nav />
       <Header />
       <Mobile />
       <Bus />
